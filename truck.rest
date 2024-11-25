@@ -1,0 +1,42 @@
+### Variables
+@url = http://localhost:3000
+
+### Get menu with all items
+GET {{url}}/api/v1/menu
+
+### Get events with all items
+GET {{url}}/api/v1/events
+
+### Get menu by ID
+GET {{url}}/api/v1/menu/6744e7aa8f45edcbca2d3cc7
+
+### Get event by ID
+GET {{url}}/api/v1/events/6744eda1ee371e119c72632d
+
+### Add a menu item
+POST {{url}}/api/v1/menu
+Content-Type: application/json
+
+{
+    "name": "Chili Verde Burrito",
+    "description": "Flour tortilla, beans, rice, melted cheese, with slow-braised pork in a tangy green chili sauce.",
+    "price": "$9.99",
+    "image": "null"
+}
+
+### Test that the POST worked by adding the inserted ID to the end (e.g. /api/v1/menu/6744f1d0f7bbd2147b3df26f)
+GET {{url}}/api/v1/menu/6744f1d0f7bbd2147b3df26f 
+
+### Add an event item
+POST {{url}}/api/v1/events
+Content-Type: application/json
+
+{
+    "name": "Salsa & Tacos on the Pier",
+    "location": "Clearwater Pier, Coastal Beach",
+    "date": "December 29, 2024",
+    "time": "12:00 PM - 6:00 PM"
+}
+
+### Test that the POST worked by adding the inserted ID to the end (e.g. /api/v1/menu/6744f1d0f7bbd2147b3df26f)
+GET {{url}}/api/v1/events/6744f25116f72dabe65eefd1
