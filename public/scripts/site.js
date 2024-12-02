@@ -1,4 +1,5 @@
 (async()=>{
+    if(document.title=="Food Truck"){
     const result = await fetch('/api/v1/events')
     const result1 = await fetch ('/api/v1/menu')
     const events = await result.json()
@@ -14,6 +15,7 @@
         <h2>${name}</h2>
         <p>${description}</p>
         <p><strong>Price:</strong> ${price}</p>
+        <br>
         `
     menuList.appendChild(div)
     })
@@ -28,4 +30,4 @@
     eventList.appendChild(div)
     }
 
-)})()
+)}})()

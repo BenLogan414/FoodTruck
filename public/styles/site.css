@@ -53,4 +53,11 @@ textarea{
 
 .menu-list img {
     float: left;
+    padding-right: 20px;
+}
+
+body {
+    color: white;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
 }
