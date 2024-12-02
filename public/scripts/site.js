@@ -6,7 +6,7 @@
     const menus = await result1.json()
     const eventList = document.querySelector(".event-list")
     const menuList = document.querySelector(".menu-list")
-
+ 
     menus.forEach(({name, description, price, image}) => {
         const div = document.createElement("div")
         div.className = "menu"
@@ -19,7 +19,7 @@
         `
     menuList.appendChild(div)
     })
-
+ 
     events.forEach(({name, location, date, time}) => {
         const div = document.createElement("div")
         div.className = "event"
@@ -29,5 +29,23 @@
         `
     eventList.appendChild(div)
     }
-
-)}})()
+   
+ 
+)}
+if (document.title=="Event"){
+    const result = await fetch('/api/v1/events')
+    const events = await result.json()
+    const eventList = document.querySelector(".events-list")
+    const splitURL = document.URL.split('/')
+    events.forEach(({name, location, date, time, _id}) => {
+        console.log(_id)
+        if (splitURL[4] == _id){
+        const div = document.createElement("div")
+        div.className = "event"
+        div.innerHTML = `
+        <h2>${name}</h2>
+        <p><strong>Location:</strong> ${location} mins<br><strong>Date:</strong> ${date}<br><strong>Time:</strong> ${time}</p>
+        `
+    eventList.appendChild(div)
+}})}
+})()

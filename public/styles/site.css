@@ -61,3 +61,7 @@ body {
     background-image: url('../images/background.jpg');
     background-size: cover;
 }
+
+.events-list {
+    text-align: center;
+}
