@@ -21,7 +21,7 @@ Content-Type: application/json
     "name": "Chili Verde Burrito",
     "description": "Flour tortilla, beans, rice, melted cheese, with slow-braised pork in a tangy green chili sauce.",
     "price": "$9.99",
-    "image": "null"
+    "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1920%2Cheight%3D1920%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/ejptcqgb/3b6fcb3a-039c-432e-bbcf-f1e73532229a"
 }
 
 ### Test that the POST worked by adding the inserted ID to the end (e.g. /api/v1/menu/6744f1d0f7bbd2147b3df26f)
