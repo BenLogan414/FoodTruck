@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event</title>
-    <link rel="stylesheet" href="/site.css">
-    <script src="/site.js" defer></script>
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="scripts/site.js" defer></script>
 </head>
-<body>
-    
+<body id="adminBody">
+    <form method="post" action="api/v1/events">
+        <h1>Create New Event</h1>
+        <label>Event Name</label>
+        <input type="text" required class="event eName" name="evName"><br>
+        <label>Event Location</label>
+        <input type="text" required class="event eLocation" name="evLocation"><br>
+        <label>Event Date</label>
+        <input type="date" required class="event eName" name="evDate"><br>
+        <label>Event Time</label>
+        <input type="time" required class="event eTime" name="evTime"><br>
+        <input type="submit" value="Create">
+        <input type="reset">
+    </form>
+    <form method="post" action="/api/v1/menu">
+        <h1>Create New Item</h1>
+        <label>Item Name</label>
+        <input type="text" required class="item iName" name="itName" id="itName"><br>
+        <label>Item Description</label><br>
+        <textarea type="text" required class="item iDescription" name="itDescription"></textarea><br>
+        <label>Item Price</label>
+        <input type="number" required class="item iPrice" name="itPrice"><br>
+        <label>Item Image URL</label>
+        <input type="text" class="item iURL" name="itURL"><br>
+        <input type="submit" value="Create">
+        <input type="reset">
+    </form>
 </body>
 </html>
