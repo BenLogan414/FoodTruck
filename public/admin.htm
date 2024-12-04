@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="styles/site.css">
     <script src="scripts/site.js" defer></script>
 </head>
@@ -11,26 +11,26 @@
     <form method="post" action="api/v1/events">
         <h1>Create New Event</h1>
         <label>Event Name</label>
-        <input type="text" required class="event eName" name="evName"><br>
+        <input type="text" required class="event eName" name="name"><br>
         <label>Event Location</label>
-        <input type="text" required class="event eLocation" name="evLocation"><br>
+        <input type="text" required class="event eLocation" name="location"><br>
         <label>Event Date</label>
-        <input type="date" required class="event eName" name="evDate"><br>
+        <input type="date" required class="event eName" name="date"><br>
         <label>Event Time</label>
-        <input type="time" required class="event eTime" name="evTime"><br>
+        <input type="time" required class="event eTime" name="time"><br>
         <input type="submit" value="Create">
         <input type="reset">
     </form>
     <form method="post" action="/api/v1/menu">
         <h1>Create New Item</h1>
         <label>Item Name</label>
-        <input type="text" required class="item iName" name="itName" id="itName"><br>
+        <input type="text" required name="itName" id="name"><br>
         <label>Item Description</label><br>
-        <textarea type="text" required class="item iDescription" name="itDescription"></textarea><br>
+        <textarea type="text" required name="description"></textarea><br>
         <label>Item Price</label>
-        <input type="number" required class="item iPrice" name="itPrice"><br>
+        <input type="number" required name="price"><br>
         <label>Item Image URL</label>
-        <input type="text" class="item iURL" name="itURL"><br>
+        <input type="text" name="image"><br>
         <input type="submit" value="Create">
         <input type="reset">
     </form>
