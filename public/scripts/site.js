@@ -25,7 +25,7 @@
         div.className = "event"
         div.innerHTML = `
         <h2><a href="/event/${_id}">${name}</a></h2>
-        <p><strong>Location:</strong> ${location} mins | <strong>Date:</strong> ${date}</p> | <strong>Time:</strong> ${time}</p>
+        <p><strong>Location:</strong> ${location} | <strong>Date:</strong> ${date}</p> | <strong>Time:</strong> ${time} mins</p>
         `
     eventList.appendChild(div)
     }
@@ -44,7 +44,7 @@ if (document.title=="Event"){
         div.className = "event"
         div.innerHTML = `
         <h2>${name}</h2>
-        <p><strong>Location:</strong> ${location} mins<br><strong>Date:</strong> ${date}<br><strong>Time:</strong> ${time}</p>
+        <p><strong>Location:</strong> ${location} | <br><strong>Date:</strong> ${date}<br><strong>Time:</strong> ${time} mins</p>
         `
     eventList.appendChild(div)
 }})}
