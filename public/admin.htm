@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="styles/site.css">
     <script src="scripts/site.js" defer></script>
 </head>
-<body id="adminBody">
+<body>
+    <div class="banner">
+        <h1><a href="/">El Gran Sabor</a></h1>
+        <p>Authentic flavor in every bite.</p>
+    </div>
+    <div id="adminBody">
     <form method="post" action="api/v1/events">
         <h1>Create New Event</h1>
         <label>Event Name</label>
@@ -15,9 +20,9 @@
         <label>Event Location</label>
         <input type="text" required class="event eLocation" name="location"><br>
         <label>Event Date</label>
-        <input type="date" required class="event eName" name="date"><br>
+        <input type="text" required class="event eName" name="date"><br>
         <label>Event Time</label>
-        <input type="time" required class="event eTime" name="time"><br>
+        <input type="text" required class="event eTime" name="time"><br>
         <input type="submit" value="Create">
         <input type="reset">
     </form>
@@ -28,11 +33,12 @@
         <label>Item Description</label><br>
         <textarea type="text" required name="description"></textarea><br>
         <label>Item Price</label>
-        <input type="number" required name="price"><br>
+        <input type="text" required name="price"><br>
         <label>Item Image URL</label>
         <input type="text" name="image"><br>
         <input type="submit" value="Create">
         <input type="reset">
     </form>
+    </div>
 </body>
 </html>

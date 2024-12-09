@@ -20,11 +20,11 @@
     menuList.appendChild(div)
     })
  
-    events.forEach(({name, location, date, time}) => {
+    events.forEach(({name, location, date, time,_id}) => {
         const div = document.createElement("div")
         div.className = "event"
         div.innerHTML = `
-        <h2>${name}</h2>
+        <h2><a href="/event/${_id}">${name}</a></h2>
         <p><strong>Location:</strong> ${location} mins | <strong>Date:</strong> ${date}</p> | <strong>Time:</strong> ${time}</p>
         `
     eventList.appendChild(div)
